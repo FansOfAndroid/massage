@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nav_item_icon_tint_color">#333</color>
+    <color name="nav_item_text_color">#333</color>
+    <color name="tabselected">#FF00FF00</color>
+    <color name="tabnomal">#FFF5F5F5</color>
+    <color name="week">#1565C0</color>
+    <color name="weekend">#FF0033</color>
+</resources>

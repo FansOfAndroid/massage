@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="ArrangeItemBinding">
+        <import type="com.dfsebook.mssage.entity.Appointment"/>
+        <variable name="arrapp" type="Appointment"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="64dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                app:monthAndDay="@{arrapp.month + arrapp.day}"
+                app:weekend="@{arrapp.weekend}"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:text="@{arrapp.chineseWeekDay}"
+                app:weekend="@{arrapp.weekend}"/>
+        </LinearLayout>
+
+        <com.dfsebook.mssage.util.MyProgressBar
+            android:id="@+id/progressBarOne"
+            style="@style/ProgressBar_Mini"
+            android:layout_width="160dp"
+            android:layout_height="20dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            app:max="@{arrapp.limitNum}"
+            app:progress="@{arrapp.ocupied}"
+            app:secondaryProgress="@{arrapp.requestNum}"/>
+    </LinearLayout>
+</layout>

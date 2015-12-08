@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="com.dfsebook.mssage.entity.ActivePicture"/>
+        <variable name="picture" type="ActivePicture"/>
+    </data>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:imageUrl="@{picture.imageUrl}"
+        app:showDetail="@{picture.showDetail}"/>
+</layout>

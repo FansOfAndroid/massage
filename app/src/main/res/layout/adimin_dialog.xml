@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/tishi"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <NumberPicker
+            android:id="@+id/personSelector"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/person"/>
+
+        <NumberPicker
+            android:id="@+id/customerSelector"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:layout_marginRight="10dp"/>
+
+        <NumberPicker
+            android:id="@+id/hourSelector"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/hour"/>
+
+        <NumberPicker
+            android:id="@+id/miniteSelector"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/minute"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/arrangeAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:textSize="16sp"
+            android:text="@string/arrangeAdd"/>
+        <Button
+            android:id="@+id/arrangeSure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:text="@string/sureClick"/>
+    </LinearLayout>
+</LinearLayout>
