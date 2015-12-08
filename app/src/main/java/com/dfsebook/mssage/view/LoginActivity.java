@@ -64,14 +64,11 @@ public class LoginActivity extends AppCompatActivity {
     private EditText cname;
     private EditText recode;
     private EditText code;
-    private Intent intent ;
     private Button register;
     private Button login ;
     private Button cancel;
     private Button selectTx;
     private ImageView imageView;
-    private String firstCode;
-    private String secondCode;
     private int selectIndex;
     private List<String> txs;
     private String tx;
@@ -123,7 +120,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private boolean codesIsSame(){
-        if (firstCode.equals(secondCode) == false) {
+        if (recode.getText().toString().equals(code.getText().toString()) == false) {
             return true;
         }
         return false;
@@ -184,6 +181,7 @@ public class LoginActivity extends AppCompatActivity {
     private class RegisterClickListener implements View.OnClickListener {
         @Override
         public void onClick(View view) {
+
             if (nameOrCodesIsNull()) {
                 Toast.makeText(LoginActivity.this, getResources().getString(R.string.inppputnull), Toast.LENGTH_SHORT).show();
                 return;

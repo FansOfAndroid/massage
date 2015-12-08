@@ -6,8 +6,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageView;
 
 import com.dfsebook.mssage.R;
+import com.dfsebook.mssage.util.String2Bitmap;
 
 public class EducationActivity extends AppCompatActivity {
 
@@ -16,7 +18,8 @@ public class EducationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_education);
-
+        ImageView imageView = (ImageView)findViewById(R.id.pic);
+        imageView.setImageBitmap(String2Bitmap.convert(100,100,"选择图片"));
     }
 
     private class MyWebviewClient extends WebViewClient{
